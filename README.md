@@ -10,7 +10,7 @@ File handling and database interaction for the imports are handled via jobs. The
 For File upload you can choose either json, excel or csv. I installed Laravel Excel and the same Import script for Accounts is being called from within the spreadsheet import. The batch information for spreadscheets is not yet integrated For future development xml and additional support could be added.
 
 **Get started**\
-after nstallation and setup you can choose to either visit the webroot of the application (default: http://127.0.0.1:8000) to upload a file or simply call command `php artisan import:accounts`. Files uploaded are stored in `storage\app\imports`, where the 3 default files are located.
+after installation and setup you can choose to either visit the webroot of the application (default: http://127.0.0.1:8000) to upload a file or simply call command `php artisan import:accounts`. Files uploaded are stored in `storage\app\imports`, where the 3 default files are located.
 
 ## Requirement ##
 - PHP7.1+
