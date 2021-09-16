@@ -41,6 +41,18 @@ return [
             'ignore_exceptions' => false,
         ],
 
+        'validation' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/validation.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+        ],
+
+        'skipimport' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/skipimport.log'),
+            'level' => env('LOG_LEVEL', 'info'),
+        ],
+
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),

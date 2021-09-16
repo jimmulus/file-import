@@ -1,0 +1,5 @@
+*
+!.gitignore
+!challenge.csv
+!challenge.json
+!challenge.xlsx
