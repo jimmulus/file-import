@@ -2,8 +2,9 @@
 
 # PXL.Widgets Json Challenge #
 
-A file import script to Import json file into the database with uniform data. While name dates and boleans are stored the same way, i would like too find a method to split addresses into seperate data.\
-The jobs are are batched and basic information is accesible through the web interface.
+A file import script to Import json file into the database with uniform data. While name dates and booleans are stored the same way, i would like too create a way to split addresses into seperate data as well.\
+The only criterium for an account to be inserted at this moment is that ages must be between 18 - 65 years.\
+File handling and database interaction for the imports are handled via jobs. The jobs are are batched and basic batch information is accesible through the web interface.
 
 **Bonus (work in progress)**\
 For File upload you can choose either json, excel or csv. I installed Laravel Excel and the same Import script for Accounts is being called from within the spreadsheet import. The batch information for spreadscheets is not yet integrated For future development xml and additional support could be added.
@@ -27,10 +28,14 @@ after nstallation and setup you can choose to either visit the webroot of the ap
 `DB_DATABASE`\
 `DB_USERNAME`\
 `DB_PASSWORD`
+- Run command in terminal to generate an APP_KEY\
+`php artisan key:generate`
 - Run command in terminal to migrate database\
 `php artisan migrate`
 - Run command in terminal to start server (or setup your own webserver)\
 `php artisan serve`
+- Run command in seperate terminal window to start a queue worker\
+`php artisan queue:work --tries=3`
 
 ## Jobs ##
 `App\Jobs\PrepareFile.php`\

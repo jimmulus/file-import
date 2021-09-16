@@ -42,7 +42,7 @@ class AccountsImport
                             $this->insertAccount($row);
                         }
                     } else {
-                        Log::channel('skipimport')->debug('birthdayFalse', $row);
+                        Log::channel('skipimport')->info('birthdayFalse', $row);
                     }
                 }
             } catch (Exception $e) {

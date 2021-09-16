@@ -50,9 +50,7 @@ class ChooseAccountImport extends Command
         if (Storage::disk('import')->exists($file)) {
             $path = Storage::disk('import')->path($file);
             $this->info('Importing Accounts File: '.$file.' ...');
-            $batch = Bus::batch([])->then(function (Batch $batch) {
-                Log::channel('validation')->info('importFille', ['done' => $batch->id]);
-            })->dispatch();
+            $batch = Bus::batch([])->dispatch();
             $batch->add(new PrepareFile($path));
             $this->info('Batch ID: '. $batch->id);
         } else {
