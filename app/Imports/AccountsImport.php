@@ -51,13 +51,6 @@ class AccountsImport
         });
     }
 
-    public function prepareData($data)
-    {
-        return $data;
-        return false
-    }
-
-
     /**
      * Create validation.
      *
